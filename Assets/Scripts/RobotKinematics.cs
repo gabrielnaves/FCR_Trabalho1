@@ -1,5 +1,10 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Moves the robot according to the speed on each wheel.
+/// </summary>
+/// The equations used here were taken from the "Kinematics.pdf" file. This file can
+/// be found on the "Reference Material" folder in this project.
 public class RobotKinematics : MonoBehaviour {
 
     public float angSpeedWheel1 = 0f;
