@@ -7,12 +7,9 @@
 /// be found on the "Reference Material" folder in this project.
 public class RobotKinematics : MonoBehaviour {
 
-    public float angSpeedWheel1 = 0f;
-    public float angSpeedWheel2 = 0f;
-    public float angSpeedWheel3 = 0f;
+    public RobotWheel[] wheels;
     public float wheelRadius = 0.1f;
     public float wheelDistanceToCenter = 0.2f;
-
 
     private Rigidbody2D rigidBody2d;
 
@@ -25,16 +22,16 @@ public class RobotKinematics : MonoBehaviour {
         float ySpeed;
         float angularSpeed;
 
-        xSpeed = -(1 / Mathf.Sqrt(3)) * wheelRadius * angSpeedWheel2 +
-                  (1 / Mathf.Sqrt(3)) * wheelRadius * angSpeedWheel3;
+        xSpeed = -(1 / Mathf.Sqrt(3)) * wheelRadius * wheels[1].angularSpeed +
+                  (1 / Mathf.Sqrt(3)) * wheelRadius * wheels[2].angularSpeed;
 
-        ySpeed = -(2f / 3f) * wheelRadius * angSpeedWheel1 +
-                  (1f / 3f) * wheelRadius * angSpeedWheel2 +
-                  (1f / 3f) * wheelRadius * angSpeedWheel3;
+        ySpeed = -(2f / 3f) * wheelRadius * wheels[0].angularSpeed +
+                  (1f / 3f) * wheelRadius * wheels[1].angularSpeed +
+                  (1f / 3f) * wheelRadius * wheels[2].angularSpeed;
 
-        angularSpeed = (wheelRadius / (3 * wheelDistanceToCenter)) * angSpeedWheel1 +
-                       (wheelRadius / (3 * wheelDistanceToCenter)) * angSpeedWheel2 +
-                       (wheelRadius / (3 * wheelDistanceToCenter)) * angSpeedWheel3;
+        angularSpeed = (wheelRadius / (3 * wheelDistanceToCenter)) * wheels[0].angularSpeed +
+                       (wheelRadius / (3 * wheelDistanceToCenter)) * wheels[1].angularSpeed +
+                       (wheelRadius / (3 * wheelDistanceToCenter)) * wheels[2].angularSpeed;
 
         rigidBody2d.velocity = new Vector2(xSpeed, ySpeed);
         rigidBody2d.angularVelocity = angularSpeed;
