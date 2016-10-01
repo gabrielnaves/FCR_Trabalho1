@@ -1083,6 +1083,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 888563022}
   - 212: {fileID: 888563023}
+  - 114: {fileID: 888563025}
+  - 68: {fileID: 888563024}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -1136,6 +1138,37 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!68 &888563024
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888563021}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: -7, y: -6}
+  - {x: 7, y: -6}
+  - {x: 7, y: 6}
+  - {x: -7, y: 6}
+  - {x: -7, y: -6}
+--- !u!114 &888563025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888563021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eed9c3e5843d947879a474b044aa46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 14
+  height: 12
 --- !u!1 &908043035
 GameObject:
   m_ObjectHideFlags: 0
