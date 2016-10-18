@@ -22,18 +22,18 @@ public class RobotKinematics : MonoBehaviour {
         float ySpeed;
         float angularSpeed;
 
-        xSpeed = -(1 / Mathf.Sqrt(3)) * wheelRadius * wheels[1].angularSpeed +
-                  (1 / Mathf.Sqrt(3)) * wheelRadius * wheels[2].angularSpeed;
+        xSpeed = Mathf.Sqrt(3)*wheelRadius*wheels[2].angularSpeed/3f -
+                 Mathf.Sqrt(3)*wheelRadius*wheels[1].angularSpeed/3f;
 
-        ySpeed = -(2f / 3f) * wheelRadius * wheels[0].angularSpeed +
-                  (1f / 3f) * wheelRadius * wheels[1].angularSpeed +
-                  (1f / 3f) * wheelRadius * wheels[2].angularSpeed;
+        ySpeed = wheelRadius*wheels[1].angularSpeed/3f -
+                 2*wheelRadius*wheels[0].angularSpeed/2f +
+                 wheelRadius*wheels[2].angularSpeed/3f;
 
-        angularSpeed = (wheelRadius / (3 * wheelDistanceToCenter)) * wheels[0].angularSpeed +
-                       (wheelRadius / (3 * wheelDistanceToCenter)) * wheels[1].angularSpeed +
-                       (wheelRadius / (3 * wheelDistanceToCenter)) * wheels[2].angularSpeed;
+        angularSpeed = wheelRadius*wheels[0].angularSpeed/(3*wheelDistanceToCenter) +
+                       wheelRadius*wheels[1].angularSpeed/(3*wheelDistanceToCenter) +
+                       wheelRadius*wheels[2].angularSpeed/(3*wheelDistanceToCenter);
 
         rigidBody2d.velocity = new Vector2(xSpeed, ySpeed);
-        rigidBody2d.angularVelocity = angularSpeed;
+        rigidBody2d.angularVelocity = angularSpeed * Mathf.Rad2Deg;
     }
 }
