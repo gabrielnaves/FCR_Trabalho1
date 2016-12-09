@@ -27,3 +27,6 @@ Para compilar o projeto, é necessário abri-lo no Unity. Clique em "File/BuildS
 Um arquivo executável previamente criado estará anexado no envio do trabalho.
 
 Todos os scripts utilizados estão escritos em C#, e podem ser encontrados na pasta "Assets/Scripts". O script com a implementação da cinemática direta está contido em "RobotKinematics.cs".
+
+
+Gabriel Naves da Silva, matrícula 12/0011867.
