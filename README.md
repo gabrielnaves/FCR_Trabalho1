@@ -1,5 +1,5 @@
 # FCR_Trabalho1
-Repositório para o trabalho 1 de Fundamentso Computacionais de Robótica, 02/2016.
+Repositório para o trabalho 1 de Fundamentos Computacionais de Robótica, 02/2016.
 
 ## Tema
 Three motorized swedish or spherical wheels arranged in a triangle.
@@ -17,3 +17,13 @@ Cada aluno deve desenvolver seu simulador, e entregar um único arquivo compacta
 - um vídeo da simulação sendo executada: esse vídeo pode ser uma captura da tela na forma de vídeo ou um filmado com celular a partir do monitor (desde que de boa qualidade).
 
 Your selection: Three motorized swedish or spherical wheels arranged in a triangle
+
+### Instruções de compilação e execução
+
+O trabalho foi feito na engine Unity. Portanto, é necessário instalar a engine para compilar. O Unity personal pode ser baixado no link a seguir: https://store.unity.com/pt/download?ref=personal
+
+Para compilar o projeto, é necessário abri-lo no Unity. Clique em "File/BuildSettings", e na janela de Build Settings, clique em "Build". A plataforma já deve estar configurada para "PC, Mac & Linux Standalone". Caso esteja configurado para outra plataforma, deve-se clicar na plataforma desejada e depois em "Switch Platform".
+
+Um arquivo executável previamente criado estará anexado no envio do trabalho.
+
+Todos os scripts utilizados estão escritos em C#, e podem ser encontrados na pasta "Assets/Scripts". O script com a implementação da cinemática direta está contido em "RobotKinematics.cs".
